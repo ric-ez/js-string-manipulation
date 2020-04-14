@@ -77,16 +77,36 @@ export default {
             let res
             switch (this.type) {
                 case 'voweltoi':
-                    res = this.words.replace(/a|i|u|e|o/gi, 'i');
+                    res = 
+                    this.words
+                    // Lowercase
+                    .replace(/a/g, 'i')
+                    .replace(/u/g, 'i')
+                    .replace(/e/g, 'i')
+                    .replace(/o/g, 'i')
+
+                    // Uppercase
+                    .replace(/A/g, 'I')
+                    .replace(/U/g, 'I')
+                    .replace(/E/g, 'I')
+                    .replace(/O/g, 'I')
                     break;
                 case 'voweltow':
                     res = 
                     this.words
-                    .replace(/i/gi, 'y')
-                    .replace(/e/gi, 'w')
-                    .replace(/o/gi, 'w')
-                    .replace(/a/gi, 'w')
-                    .replace(/u/gi, 'w')
+                    // Lowercase
+                    .replace(/i/g, 'y')
+                    .replace(/e/g, 'w')
+                    .replace(/o/g, 'w')
+                    .replace(/a/g, 'w')
+                    .replace(/u/g, 'w')
+
+                    // Uppercase
+                    .replace(/I/g, 'Y')
+                    .replace(/E/g, 'W')
+                    .replace(/O/g, 'W')
+                    .replace(/A/g, 'W')
+                    .replace(/U/g, 'W')
                     break;
                 case 'voweltonum':
                     res = 
@@ -111,7 +131,19 @@ export default {
                     }).join("")
                     break;
                 default:
-                    res = this.words.replace(/a|i|u|e|o/gi, 'i');
+                    res = 
+                    this.words
+                    // Lowercase
+                    .replace(/a/g, 'i')
+                    .replace(/u/g, 'i')
+                    .replace(/e/g, 'i')
+                    .replace(/o/g, 'i')
+
+                    // Uppercase
+                    .replace(/A/g, 'I')
+                    .replace(/U/g, 'I')
+                    .replace(/E/g, 'I')
+                    .replace(/O/g, 'I')
                     break;
             }
             return res
